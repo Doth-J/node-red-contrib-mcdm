@@ -1,0 +1,49 @@
+<script type="text/javascript" id="node-topsis">
+    RED.nodes.registerType('topsis',{
+        category:'MCDM',
+        color:'#FDF0C2',
+        icon:'decision.svg',
+        inputs:1,
+        inputLabels: "Decision Matrix & Weigths",
+        outputs:1,
+        outputLabels: "Scores",
+        defaults: {
+            name: {value:''},
+            maximize: {value:true},
+            performance: {value:false}
+        },
+        paletteLabel:"topsis",
+        label: function(){
+            return this.name || 'topsis'
+        }
+    });
+</script>
+<script type="text/html" data-template-name="topsis">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-maximize"><i class="fa fa-plus"></i> Maximize:</label>
+        <input type="checkbox" id="node-input-maximize">
+    </div>
+    <div class="form-row">
+        <label for="node-input-performance"><i class="fa fa-gear"></i> Performance</label>
+        <input type="checkbox" id="node-input-performance">
+    </div>
+</script>
+<script type="text/html" data-help-name="topsis">
+    <p>Template Node-RED node</p>
+    <h3>Inputs</h3>
+    <dl class="message-properties">
+    <dt>payload
+        <span class="property-type">string</span>
+    </dt>
+    <h3>Outputs</h3>
+    <dl class="message-properties">
+    <dt>payload
+        <span class="property-type">string</span>
+    </dt>
+    <h3>Details</h3>
+    <p>Some more information about the node.</p>
+</script>

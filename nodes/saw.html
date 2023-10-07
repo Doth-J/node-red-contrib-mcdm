@@ -1,0 +1,47 @@
+<script type="text/javascript" id="node-saw">
+    RED.nodes.registerType('saw',{
+        category:'MCDM',
+        color:'#FDF0C2',
+        icon:'decision.svg',
+        inputs:1,
+        inputLabels: "Decision Matrix",
+        outputs:1,
+        outputLabels: "Scores",
+        defaults: {
+            name: {value:''},
+            performance: {value:false}
+        },
+        paletteLabel:"saw",
+        label: function(){
+            return this.name || 'saw'
+        }
+    });
+</script>
+<script type="text/html" data-template-name="saw">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-performance"><i class="fa fa-gear"></i> Performance</label>
+        <input type="checkbox" id="node-input-performance">
+    </div>
+</script>
+<script type="text/html" data-help-name="saw">
+    <p>SAW Node-RED node</p>
+    <h3>Inputs</h3>
+    <dl class="message-properties">
+    <dt>payload.decisionMatrix
+        <span class="property-type">number[][]</span>
+    </dt>
+    <dt>payload.weights
+        <span class="property-type">number[]</span>
+    </dt>
+    <h3>Outputs</h3>
+    <dl class="message-properties">
+    <dt>payload
+        <span class="property-type">string</span>
+    </dt>
+    <h3>Details</h3>
+    <p>SAW (Simple Additive Weighting), also known as the weighted sum model, is a popular Multi-Criteria Decision-Making (MCDM) method. It is utilized to determine the best option among a set of alternatives evaluated against multiple criteria.</p>
+</script>

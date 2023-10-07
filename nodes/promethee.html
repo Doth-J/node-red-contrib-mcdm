@@ -1,0 +1,106 @@
+<script type="text/javascript" id="node-promethee">
+    RED.nodes.registerType('promethee',{
+        category:'MCDM',
+        color:'#FDF0C2',
+        icon:'decision.svg',
+        inputs:1,
+        inputLabels: "Decision Matrix & Weigths",
+        outputs:1,
+        outputLabels: "Ranks",
+        defaults: {
+            name: {value:''},
+            pfunction: {value:'usualCriterion'},
+            p: {value:''},
+            q: {value:''},
+            s: {value:''},
+            performance: {value:false}
+        },
+        oneditprepare:()=>{
+            $("#node-input-pfunction").typedInput({
+                types:[
+                    {
+                        options:[
+                            {value:"usualCriterion", label:'Usual Criterion'},
+                            {value:"levelCriterion", label:'Level Criterion'},
+                            {value:"quasiCriterion", label:'Quasi Criterion'},
+                            {value:"gaussianCriterion", label:'Gaussian Criterion'},
+                            {value:"linearCriterion", label:'Linear Criterion'},
+                        ]
+                    }
+                ]
+            })
+            $("#node-input-pfunction").change(()=>{
+                $(".param").hide();
+                switch($("#node-input-pfunction").val()){
+                    case "usualCriterion":{
+                        break;
+                    }
+                    case "levelCriterion":{
+                        $("#p-value").show();
+                        break;
+                    }
+                    case "quasiCriterion":{
+                        $("#q-value").show();
+                        break;
+                    }
+                    case "gaussianCriterion":{
+                        $("#s-value").show();
+                        break;
+                    }
+                    case "linearCriterion":{
+                        $("#p-value").show();
+                        $("#s-value").show();
+                        break;
+                    }
+                }
+            })
+                 
+
+        },
+        paletteLabel:"promethee",
+        label: function(){
+            return this.name || 'promethee'
+        }
+    });
+</script>
+<script type="text/html" data-template-name="promethee">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-pfunction"><i class="fa fa-gear"></i> Preference Function</label>
+        <input type="text" id="node-input-pfunction">
+    </div>
+    <div class="form-row param" id="p-value">
+        <label for="node-input-p"><i class="fa fa-gear"></i> Preference threshold</label>
+        <input type="number" step=".01" id="node-input-p">
+    </div>
+    <div class="form-row param" id="q-value">
+        <label for="node-input-q"><i class="fa fa-gear"></i> Indifference threshold</label>
+        <input type="number" step=".01" id="node-input-q">
+    </div>
+    <div class="form-row param" id="s-value">
+        <label for="node-input-s"><i class="fa fa-gear"></i> Standard Deviation</label>
+        <input type="number" step=".01" id="node-input-s">
+    </div>
+    <div class="form-row">
+        <label for="node-input-performance"><i class="fa fa-gear"></i> Performance</label>
+        <input type="checkbox" id="node-input-performance">
+    </div>
+</script>
+<script type="text/html" data-help-name="promethee">
+    <p>Template Node-RED node</p>
+    <h3>Inputs</h3>
+    <dl class="message-properties">
+    <dt>payload
+        <span class="property-type">string</span>
+    </dt>
+    <h3>Outputs</h3>
+    <dl class="message-properties">
+    <dt>payload
+        <span class="property-type">string</span>
+    </dt>
+    <h3>Details</h3>
+    <p>Some more information about the node.</p>
+</script>

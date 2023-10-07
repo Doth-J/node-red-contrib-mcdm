@@ -1,0 +1,5 @@
+.nodered
+node_modules
+incubator
+package-lock.json
+nodemon.json

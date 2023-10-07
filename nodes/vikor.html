@@ -1,0 +1,49 @@
+<script type="text/javascript" id="node-vikor">
+    RED.nodes.registerType('vikor',{
+        category:'MCDM',
+        color:'#FDF0C2',
+        icon:'decision.svg',
+        inputs:1,
+        inputLabels: "Decision Matrix",
+        outputs:1,
+        outputLabels: "Q Values",
+        defaults: {
+            name: {value:''},
+            v: {value:0.5},
+            performance: {value:false}
+        },
+        paletteLabel:"vikor",
+        label: function(){
+            return this.name || 'vikor'
+        }
+    });
+</script>
+<script type="text/html" data-template-name="vikor">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-v"><i class="fa fa-gear"></i> Majority Rule</label>
+        <input type="number" min="0.5" max="1" step=".01" id="node-input-v">
+    </div>
+    <div class="form-row">
+        <label for="node-input-performance"><i class="fa fa-gear"></i> Performance</label>
+        <input type="checkbox" id="node-input-performance">
+    </div>
+</script>
+<script type="text/html" data-help-name="vikor">
+    <p>VIKOR Node-RED node</p>
+    <h3>Inputs</h3>
+    <dl class="message-properties">
+    <dt>payload
+        <span class="property-type">string</span>
+    </dt>
+    <h3>Outputs</h3>
+    <dl class="message-properties">
+    <dt>payload
+        <span class="property-type">string</span>
+    </dt>
+    <h3>Details</h3>
+    <p>VIKOR (Vlsekriterijumska Optimizacija I Kompromisno Resenje) is a multi-criteria decision-making method that focuses on ranking and selecting from a set of alternatives and determines compromise solutions for a problem with conflicting criteria.</p>
+</script>
