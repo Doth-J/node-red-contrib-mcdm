@@ -1,5 +1,5 @@
 {
-   "name": "node-red-contrib-madm",
+   "name": "node-red-contrib-mcdm",
    "author": "Doth-J",
    "description": "Node-RED Multi Criterion Decision Making Nodes",
    "license": "Apache-2.0",
