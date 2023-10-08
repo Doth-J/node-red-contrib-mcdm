@@ -8,6 +8,34 @@ npm install node-red-contrib-mcdm
 ```
 You can also install the collection from the Node-RED editor *Manage palette* option of the menu.
 
+### Local Incubator Server ⚙️
+Clone the github repository by executing the following command:
+```console
+git clone https://github.com/Doth-J/node-red-contrib-mcdm.git
+```
+Inside the project directory, install the dependencies and start the incubator server executing the commands:
+```console
+cd ./node-red-contrib-mcdm
+npm install;
+npm start
+```
+A Node-RED incubator server will start in [http://localhost:1880](http://localhost:1880) already loaded with the Multi-Criteria Decision Making nodes:
+```console
+> node-red-contrib-madm@0.0.1 start
+> node incubator/server.js 
+
+8 Oct 20:34:28 - [info] 
+
+Welcome to Node-RED
+===================
+.
+.
+.
+8 Oct 20:34:32 - [info] Started Node-RED server: http://localhost:1880
+8 Oct 20:34:32 - [info] Starting flows
+8 Oct 20:34:32 - [info] Started flows
+```
+
 ## Multi Criteria Decision Making (*MCDM*) 📚
 Multi-Criteria Decision Making, also known as MCDM, refers to making decisions in the presence of multiple, usually conflicting, criteria. The aim is to find the best possible solution by considering multiple decision criteria, which are typically conflicting in nature. These criteria can be quantitative or qualitative in nature.
 
