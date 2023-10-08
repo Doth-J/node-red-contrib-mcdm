@@ -3,7 +3,7 @@
    "author": "Doth-J",
    "description": "Node-RED Multi Criterion Decision Making Nodes",
    "license": "Apache-2.0",
-   "version": "0.0.1",
+   "version": "0.0.2",
    "keywords": [
       "node-red",
       "node-inq"
@@ -14,7 +14,8 @@
          "saw": "nodes/saw.js",
          "topsis": "nodes/topsis.js",
          "moora": "nodes/moora.js",
-         "vikor": "nodes/vikor.js"
+         "vikor": "nodes/vikor.js",
+         "promethee": "nodes/promethee.js"
       }
    },
    "scripts": {
