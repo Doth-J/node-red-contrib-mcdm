@@ -1,7 +1,7 @@
 # node-red-contrib-mcdm
 This is a collection of Node-RED nodes for working with [*Multi-Criteria Decision Making*](https://en.wikipedia.org/wiki/Multiple-criteria_decision_analysis) algorithms in your flow.
 
-⚠️ **These algorithms are computationally intensive, although they can wrapped as functions.** 
+⚠️ **These algorithms are not optimized and are computationally intensive, although they can wrapped and used as functions.** ⚠️
 
 ## Installation ⚡
 To install the node execute the following command inside the .node-red directory:
