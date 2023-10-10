@@ -1,7 +1,7 @@
 # node-red-contrib-mcdm
 This is a collection of Node-RED nodes for working with [*Multi-Criteria Decision Making*](https://en.wikipedia.org/wiki/Multiple-criteria_decision_analysis) algorithms in your flow.
 
-⚠️ **The algorithms are computationally intensive, although they can wrapped and used as functions.** ⚠️
+⚠️ **The algorithms are computationally intense, although they can wrapped and used as functions.** ⚠️
 
 ## Installation ⚡
 To install the node execute the following command inside the .node-red directory:
@@ -335,3 +335,7 @@ Preference Ranking Organization Method for Enrichment of Evaluations, also known
     }
     ```
 
+## Performance Metrics
+Each of the nodes comes with a performance checkbox that can measure the time for each step of the chosen MCDM algorithm.
+ 
+![Performance Metrics](https://github.com/Doth-J/node-red-contrib-mcdm/blob/main/docs/performance.png?raw=true)

@@ -211,7 +211,7 @@
         "type": "vikor",
         "z": "f9f68ea2a19d267c",
         "name": "",
-        "v": "0.95",
+        "v": 0.5,
         "performance": false,
         "x": 330,
         "y": 420,
@@ -288,65 +288,5 @@
         "x": 530,
         "y": 420,
         "wires": []
-    },
-    {
-        "id": "60cffb576fc2fe95",
-        "type": "inject",
-        "z": "f9f68ea2a19d267c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"decisionMatrix\":[[1,2,3],[3,2,1],[2,2,2]],\"weights\":[0.5,0.3,0.2]}",
-        "payloadType": "json",
-        "x": 130,
-        "y": 500,
-        "wires": [
-            [
-                "25a4658852b505d2"
-            ]
-        ]
-    },
-    {
-        "id": "54594498b6fd4d87",
-        "type": "debug",
-        "z": "f9f68ea2a19d267c",
-        "name": "debug",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 500,
-        "wires": []
-    },
-    {
-        "id": "25a4658852b505d2",
-        "type": "promethee",
-        "z": "f9f68ea2a19d267c",
-        "name": "",
-        "pfunction": "usualCriterion",
-        "p": "",
-        "q": "",
-        "s": "",
-        "performance": false,
-        "x": 330,
-        "y": 500,
-        "wires": [
-            [
-                "54594498b6fd4d87"
-            ]
-        ]
     }
 ]
